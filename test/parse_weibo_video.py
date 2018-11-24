@@ -32,6 +32,7 @@ class WeiboHtmlParse(HTMLParser):
 
 with webdriver.Chrome(ChromeDriverManager().install()) as browser:
     browser.get(path)
+
     # 添加条件等待
     WebDriverWait(browser, 20, 0.5).until(
         expected_conditions.presence_of_all_elements_located((By.TAG_NAME, 'video')))
